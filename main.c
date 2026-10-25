@@ -13,6 +13,8 @@ Put the new_image to the screen
 */
 void	ft_rotate_player(void *param)
 {
+	(void)param;
+	/*
 	int		x_oreintation;
 	int		x_oreintation;
 	t_game	*game;
@@ -27,7 +29,7 @@ void	ft_rotate_player(void *param)
 	// How to rotate the image?
 
 	mlx_image_to_window(game->mlx, game->player->player_arrow, )
-
+	*/
 
 }
 
