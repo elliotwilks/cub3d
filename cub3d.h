@@ -58,7 +58,8 @@ typedef struct s_player
 	float			x_orientation; // x <--- Left and right
 	float			y_orientation; // y <-- Up and down
 
-	int				turn_direction;
+	float			direction_x;
+	float			direction_y;
 	int				walk_direction;
 	int				move_speed;
 	int				rotation_speed;

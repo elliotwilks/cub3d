@@ -34,11 +34,13 @@ t_player	*build_player(t_game *game)
 
 	player = malloc(sizeof(t_player));
 
-	player->turn_direction = 0;
+	player->direction_x = 0;
+	player->direction_y = 1;
 	player->walk_direction = 0;
 	player->move_speed = 2;
 	player->rotation_speed = 1;
 	player->player_image = mlx_new_image(game->mlx, 33, 33);
+	player->player_arrow = mlx_new_image(game->mlx, 100, 100);
 
 	get_position(player, game->data->grid);
 	get_orientation(player);

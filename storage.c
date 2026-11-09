@@ -266,3 +266,40 @@ segfault when trying to use the if statement with my wall check.
 */
 /* The maximum x and y values in char **grid
 X = 13 and Y = 29 */
+/*
+How can I do rotation?
+Direction can be a vector: x and y components | y = +1, x = 0 | Facing North (straight up)
+
+My player has an x direction and a y direction
+
+at the moment y is 1 and x is 0. So the line should go
+straight up. How can I draw this.
+
+I can start at the player position. Then if 
+
+Ok I think I understand now. I basicly do I while loop and put a
+pixel to the screen. 
+
+The putpixel() function looks like this. 
+
+
+mlx_put_pixel(img, x, y, color);
+
+It needs x and y coordinates.
+
+So this is the key part. I can increment or de-increment the x and y coordinates by the 
+vector x and y values. Pretty cool and simple
+
+*/
+
+
+/*
+I need to be able to draw a line that shoots out in front of the player so I can
+see the orientation of the player and when they rotate.
+
+Common Pattern
+Create the "new_image"
+Fill the new_image;
+Put the new_image to the screen
+
+*/
