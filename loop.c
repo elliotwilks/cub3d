@@ -1,6 +1,5 @@
 #include "cub3d.h"
 
-
 int	is_wall(t_game *game, int new_x, int new_y)
 {
 	int	x;
@@ -35,13 +34,13 @@ void ft_move_player(void* param)
 	new_x = game->player->x_position;
 	new_y = game->player->y_position;
 
-	if (mlx_is_key_down(game->mlx, MLX_KEY_UP))
+	if (mlx_is_key_down(game->mlx, MLX_KEY_W))
 		new_y -= SPEED;
-	if (mlx_is_key_down(game->mlx, MLX_KEY_DOWN))
+	if (mlx_is_key_down(game->mlx, MLX_KEY_S))
 		new_y += SPEED;
-	if (mlx_is_key_down(game->mlx, MLX_KEY_LEFT))
+	if (mlx_is_key_down(game->mlx, MLX_KEY_A))
 		new_x -= SPEED;
-	if (mlx_is_key_down(game->mlx, MLX_KEY_RIGHT))
+	if (mlx_is_key_down(game->mlx, MLX_KEY_D))
 		new_x += SPEED;
 
 	/*
@@ -67,3 +66,4 @@ void ft_move_player(void* param)
 		game->player->player_image->instances[0].y = new_y;
 	}
 }
+

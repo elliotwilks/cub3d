@@ -275,19 +275,19 @@ My player has an x direction and a y direction
 at the moment y is 1 and x is 0. So the line should go
 straight up. How can I draw this.
 
-I can start at the player position. Then if 
+I can start at the player position. Then if
 
 Ok I think I understand now. I basicly do I while loop and put a
-pixel to the screen. 
+pixel to the screen.
 
-The putpixel() function looks like this. 
+The putpixel() function looks like this.
 
 
 mlx_put_pixel(img, x, y, color);
 
 It needs x and y coordinates.
 
-So this is the key part. I can increment or de-increment the x and y coordinates by the 
+So this is the key part. I can increment or de-increment the x and y coordinates by the
 vector x and y values. Pretty cool and simple
 
 */
@@ -301,5 +301,19 @@ Common Pattern
 Create the "new_image"
 Fill the new_image;
 Put the new_image to the screen
+
+*/
+/*
+Function Description
+
+I want to move the arrow
+
+- Left -- Look left
+- Right -- Look Right
+
+W (forward), A (left), S (back), D (right)
+
+When I press the left key I want the dir_x and dir_y to change.
+
 
 */

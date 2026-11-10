@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include <math.h>
 
 #include "MLX42.h"
 #include "MLX42_Int.h"
@@ -115,12 +116,15 @@ void		print_grid(char **grid);
 /*:::::::::::::::::::		LOOP FUNCTIONS		:::::::::::::::::::::*/
 
 void	ft_move_player(void* param);
+void	ft_move_arrow(void* param);
 int		is_wall(t_game *game, int new_x, int new_y);
+void	draw_arrow(t_game *game);
 
 
 /*:::::::::::::::::::		DRAW FUNCTIONS		:::::::::::::::::::::*/
 
 void		fill(mlx_image_t *img, uint32_t color);
+void		fill_arrow(t_game *game);
 void		draw_mini_map(t_game *game);
 void		draw_player(t_game *game);
 
