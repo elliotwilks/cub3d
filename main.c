@@ -11,9 +11,44 @@ double radius = 10.0; // Distance from the center poin
 
 What is a Radian?
 
-// Convert to radians inside the function call: degrees * (PI / 180.0)
+Convert to radians inside the function call: degrees * (PI / 180.0)
 double x = radius * cos(degrees * (PI / 180.0));
 double y = radius * sin(degrees * (PI / 180.0));
+
+
+x = radius * cos(radian value);
+
+	 ^^^
+  why radius? Ahh yes, the radius is just the distance out that we are going. 
+  so in a while loop it usually will be i++. However I could call the variable
+  radius++
+
+  so as we increment radius by 1 each time. we also get a new x / y value beacuse
+  we times the 1 or 2 or 3 or 4 by the return value of cos() or sin(). 
+
+  The return value of cos() for example gives use the exact coordinate we need. 
+
+  The cos(radian) function returns a value between -1 and 1. 
+  The sin(radian) function does the same thing but is specific for the y cooridnates.
+
+Finally this is beggining to click. 
+
+I could make a special function that allowed me to simply pass the degree value I
+want instead of having to pass the radian value. So I could do something like this
+
+	 x = degree_cos(90); <--- Would return 0 
+	 y = degree_sin(90); <--- Would return 1
+
+	x_coordinate = x * radius;
+	y_coordinate = y * radius;
+
+So I should be able to take the return values of these funtions and give them 
+to the mlx_put_pixel() function for the x and y coordinates for that specific
+pixel and then increment the radius.
+
+Then if I want to change the angle of the line with the arrow keys I shold be able
+to increase or reduce the degree angle. Then remember to update the mlx image; 
+
 
 */
 
@@ -35,7 +70,19 @@ To get the correct value I need to do a calculation.
 
 I need to times the degrees, say 90
 
-f
+Question: Why is any of this triginomitary stuff relevent to me?
+
+I need to draw a line. This is easy. I can just use a while loop like this
+
+while (i < 100)
+{
+	mlx_put_pixel(mlx, i, j, colour);
+	i++;	
+}
+
+But if I want to draw a line that is at a certain degree from a single point
+
+I need some x and y coordinates plus an angle?
 
 */
 
