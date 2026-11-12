@@ -19,8 +19,10 @@
 #define PLAYER_SIZE 27
 #define ARROW_WIDTH 10
 #define ARROW_HEIGHT 30
+#define ARROW_LENGTH 100
 #define WALL_BLOCK_SIZE 33
 #define SPEED 5
+#define PI 3.14159265358979323846
 
 typedef struct s_data t_data;
 typedef struct s_player t_player;
@@ -66,6 +68,7 @@ typedef struct s_player
 	int				rotation_speed;
 	mlx_image_t		*player_image;
 	mlx_image_t		*player_arrow;
+	float			arrow_angle;
 }
 t_player;
 
